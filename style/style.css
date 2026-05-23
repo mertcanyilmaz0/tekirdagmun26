@@ -650,13 +650,18 @@ footer .footer_list .footer_list_tiktok svg:hover {
   justify-content: center;
   z-index: 2;
 }
-
+.apply_section .apply_big_container .apply_first_list .apply_first_list_eleman{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .apply_section .apply_big_container .apply_first_list {
-  list-style: none;
+   list-style: none;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   gap: 10rem;
+
 }
 
 .apply_card {
@@ -909,15 +914,7 @@ footer .footer_list .footer_list_tiktok svg:hover {
     font-size:34px;
   }
 }
-/* Committees End */
 
-/* ========================================================= */
-/* =================== RESPONSIVE DESIGN =================== */
-/* ========================================================= */
-
-/* ===== RESPONSIVE ===== */
-
-/* Laptop geniş: 1200–1440px */
 @media (max-width: 1440px) {
   .apply_section .apply_big_container .apply_first_list {
     gap: 6rem;
@@ -948,7 +945,7 @@ footer .footer_list .footer_list_tiktok svg:hover {
 
   .apply_section .apply_big_container .apply_first_list {
     gap: 3rem;
-    flex-wrap: wrap;
+    flex-direction: column;
   }
 
   .apply_card {
