@@ -167,16 +167,14 @@ header .buttons button {
 }
 /* Home Section Start */
 .home_section {
+  position: relative;
+  overflow: hidden;
   min-height: calc(100vh - 11.4rem);
   display: flex;
   flex-direction: column;
-  align-items: top;
+  align-items: center;
   justify-content: center;
-/*   background-image: url(/img/wp13653536-dune-movie-4k-wallpapers.jpg); 
-  background-size: cover;
-  background-position: top;
-  background-repeat: no-repeat; */
-  z-index: 2;
+  z-index: 0;
 }
 .home_section::before {
   content: "";
@@ -917,24 +915,39 @@ footer .footer_list .footer_list_tiktok svg:hover {
 /* =================== RESPONSIVE DESIGN =================== */
 /* ========================================================= */
 
-@media (max-width: 1200px) {
-  html {
-    font-size: 58%;
-  }
+/* ===== RESPONSIVE ===== */
 
-  .scroll {
-    max-width: 70%;
+/* Laptop geniş: 1200–1440px */
+@media (max-width: 1440px) {
+  .apply_section .apply_big_container .apply_first_list {
+    gap: 6rem;
   }
+}
+
+@media (max-width: 1200px) {
+  html { font-size: 58%; }
+
+  .scroll { max-width: 70%; }
 
   .home_section .home_big_container .home_logo_container img {
     height: 32rem;
   }
-}
-/* ========================================================= */
 
-@media (max-width: 1024px) {
   .apply_section .apply_big_container .apply_first_list {
-    gap: 5rem;
+    gap: 4rem;
+  }
+
+  .apply_card {
+    width: 28rem;
+  }
+}
+
+/* Laptop dar / büyük tablet: 993–1024px arası boşluğu kapat */
+@media (max-width: 1024px) {
+  html { font-size: 56%; }
+
+  .apply_section .apply_big_container .apply_first_list {
+    gap: 3rem;
     flex-wrap: wrap;
   }
 
@@ -944,8 +957,12 @@ footer .footer_list .footer_list_tiktok svg:hover {
   }
 }
 
-/* ========================================================= */
+/* Tablet / hamburger geçişi */
 @media (max-width: 992px) {
+  html { font-size: 55%; }
+
+  section { padding: 3rem 4%; }
+
   header {
     position: sticky;
     justify-content: space-around;
@@ -959,7 +976,6 @@ footer .footer_list .footer_list_tiktok svg:hover {
     justify-content: center;
     background: transparent;
     color: var(--text-primary);
-
     font-size: 3rem;
     cursor: pointer;
   }
@@ -971,32 +987,22 @@ footer .footer_list .footer_list_tiktok svg:hover {
 
   header .navbar {
     position: absolute;
-
     top: 100%;
     right: 20%;
-
     width: 28rem;
-
     background: var(--bg-secondary);
-
     border: 0.1rem solid var(--border-color);
-
     border-radius: 1.6rem;
-
     overflow: hidden;
-
     opacity: 0;
     visibility: hidden;
-
     transform: translateY(-10px);
-
     transition: 0.3s ease;
   }
 
   header .navbar.active {
     opacity: 1;
     visibility: visible;
-
     transform: translateY(0);
   }
 
@@ -1012,11 +1018,8 @@ footer .footer_list .footer_list_tiktok svg:hover {
 
   header .navbar .navbar_list .navbar_list_li {
     display: block;
-
     width: 100%;
-
     padding: 1.6rem 2rem;
-
     border-bottom: 0.1rem solid rgba(255, 255, 255, 0.05);
   }
 
@@ -1024,22 +1027,10 @@ footer .footer_list .footer_list_tiktok svg:hover {
     display: block;
     width: 100%;
   }
-}
-@media (max-width: 992px) {
-  html {
-    font-size: 55%;
-  }
-
-  section {
-    padding: 3rem 4%;
-  }
-
-  /* HOME */
 
   .home_section {
     padding-top: 5rem;
     padding-bottom: 5rem;
-
     background-position: center;
   }
 
@@ -1051,295 +1042,130 @@ footer .footer_list .footer_list_tiktok svg:hover {
     font-size: 1.7rem;
   }
 
-  /* COUNTDOWN */
+  .countdown { flex-wrap: wrap; gap: 1.5rem; }
 
-  .countdown {
+  .box { width: 8rem; height: 10rem; font-size: 3.5rem; }
+
+  .scroll { max-width: 90%; padding: 2.4rem 1.8rem; }
+
+  .letter_body p { font-size: 1.5rem; }
+
+  /* Apply kartları tablet ortası: 2'li grid'e geç */
+  .apply_section .apply_big_container .apply_first_list {
+    gap: 3rem;
     flex-wrap: wrap;
-    gap: 1.5rem;
+    justify-content: center;
   }
 
-  .box {
-    width: 8rem;
-    height: 10rem;
-
-    font-size: 3.5rem;
+  .apply_card {
+    width: calc(50% - 1.5rem);
+    min-width: 25rem;
+    height: auto;
+    min-height: 40rem;
   }
 
-  /* LETTER */
-
-  .scroll {
-    max-width: 90%;
-    padding: 2.4rem 1.8rem;
-  }
-
-  .letter_body p {
-    font-size: 1.5rem;
-  }
-
-  /* FOOTER */
-
-  footer .footer_list {
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
+  footer .footer_list { flex-wrap: wrap; gap: 1rem; }
 }
 
-/* ========================================================= */
-
 @media (max-width: 768px) {
-  html {
-    font-size: 52%;
-  }
+  html { font-size: 52%; }
 
-  header {
-    height: 10rem;
-  }
+  header { height: 10rem; }
+  header .logo .tekirdagmun_logo { height: 7rem; }
 
-  header .logo .tekirdagmun_logo {
-    height: 7rem;
-  }
-
-  /* HOME */
-
-  .home_section .home_big_container .home_logo_container img {
-    height: 30rem;
-  }
+  .home_section .home_big_container .home_logo_container img { height: 30rem; }
 
   .home_section .home_big_container .home_head_container {
     font-size: 1.5rem;
     padding: 0 1rem;
   }
 
-  .home_section .home_big_container .home_apply_container button {
+  .home_section .apply_container button {
     width: 100%;
-
     font-size: 2rem;
   }
 
-  /* COUNTDOWN */
+  .countdown { gap: 1rem; }
+  .box { width: 7rem; height: 8.5rem; font-size: 3rem; }
+  .label { font-size: 1rem; }
 
-  .countdown {
-    gap: 1rem;
-  }
+  .seal { font-size: 2.5rem; }
+  h1 { font-size: 1.6rem; }
+  .realm, .date { font-size: 1rem; }
+  .letter_body p { font-size: 1.35rem; line-height: 1.8; }
 
-  .box {
-    width: 7rem;
-    height: 8.5rem;
+  .overlay-box { width: 92%; padding: 2.2rem; }
+  .map { height: 24rem; }
 
-    font-size: 3rem;
-  }
-
-  .label {
-    font-size: 1rem;
-  }
-
-  /* LETTER */
-
-  .seal {
-    font-size: 2.5rem;
-  }
-
-  h1 {
-    font-size: 1.6rem;
-  }
-
-  .realm,
-  .date {
-    font-size: 1rem;
-  }
-
-  .letter_body p {
-    font-size: 1.35rem;
-    line-height: 1.8;
-  }
-
-  /* OVERLAY */
-
-  .overlay-box {
-    width: 92%;
-
-    padding: 2.2rem;
-  }
-
-  .map {
-    height: 24rem;
-  }
-
-  .apply_section {
-    align-items: center;
-    padding: 2rem 1rem;
-  }
+  /* Apply: tekil kolon */
+  .apply_section { align-items: center; padding: 2rem 1rem; }
 
   .apply_section .apply_big_container .apply_first_list {
     flex-direction: column;
     gap: 3rem;
+    align-items: center;
   }
 
   .apply_card {
     width: 90%;
-    max-width: 32rem;
+    max-width: 36rem;
     height: auto;
     padding: 2rem;
+    min-height: unset;
   }
 
-  .apply_card .card_content .card_title {
-    font-size: 2.4rem;
-  }
+  .apply_card .card_content .card_title { font-size: 2.4rem; }
+  .apply_card .card_content .card_desc { font-size: 1.4rem; }
 
-  .apply_card .card_content .card_desc {
-    font-size: 1.4rem;
-  }
-
-  .seal_button {
-    width: 100%;
-    height: 6rem;
-  }
+  .seal_button { width: 100%; height: 6rem; }
 }
-/* ========================================================= */
 
 @media (max-width: 576px) {
-  html {
-    font-size: 50%;
-  }
+  html { font-size: 50%; }
+  section { padding: 2.5rem 3%; }
+  header { height: 9rem; }
+  header .logo .tekirdagmun_logo { height: 6rem; }
 
-  section {
-    padding: 2.5rem 3%;
-  }
+  header .navbar { width: 100%; right: 0; border-radius: 0; }
 
-  header {
-    height: 9rem;
-  }
+  .home_section .home_big_container .home_logo_container img { height: 25rem; }
+  .home_section .home_big_container .home_head_container { font-size: 1.3rem; }
 
-  header .logo .tekirdagmun_logo {
-    height: 6rem;
-  }
-
-  header .navbar {
-    width: 100%;
-    right: 0;
-    border-radius: 0;
-  }
-
-  /* HOME */
-
-  .home_section .home_big_container .home_logo_container img {
-    height: 25rem;
-  }
-
-  .home_section .home_big_container .home_head_container {
-    font-size: 1.3rem;
-  }
-
-  .home_section .home_big_container .home_apply_container {
-    width: 100%;
-  }
-
+  .home_section .home_big_container .home_apply_container { width: 100%; }
   .home_section .home_big_container .home_apply_container button {
     width: 100%;
     padding: 1.2rem;
-
     font-size: 1.8rem;
   }
 
-  /* COUNTDOWN */
-  .countdown {
-    flex-wrap: nowrap;
-  }
-  .unit {
-    width: 100%;
-  }
+  .countdown { flex-wrap: nowrap; }
+  .unit { width: 100%; }
+  .box { margin: auto; }
 
-  .box {
-    margin: auto;
-  }
+  .scroll { max-width: 100%; margin: 1rem 0; border-radius: 1.4rem; }
+  .letter_body p { text-align: left; }
 
-  /* LETTER */
+  .footer_section { padding: 3rem 1rem; }
+  .footer_big_container .footer_text .meta_strip { font-size: 1rem; }
 
-  .scroll {
-    max-width: 100%;
-    margin: 1rem 0;
-    border-radius: 1.4rem;
-  }
-
-  .letter_body p {
-    text-align: left;
-  }
-
-  /* FOOTER */
-
-  .footer_section {
-    padding: 3rem 1rem;
-  }
-
-  .footer_big_container .footer_text .meta_strip {
-    font-size: 1rem;
-  }
-
-  /* OVERLAY */
-
-  .overlay-box {
-    padding: 2rem 1.6rem;
-    border-radius: 1.8rem;
-  }
-
-  .info-item {
-    font-size: 1.3rem;
-  }
-
-  .map {
-    height: 20rem;
-  }
+  .overlay-box { padding: 2rem 1.6rem; border-radius: 1.8rem; }
+  .info-item { font-size: 1.3rem; }
+  .map { height: 20rem; }
 }
-/* ========================================================= */
+
 @media (max-width: 480px) {
-  .apply_card {
-    width: 95%;
-    border-radius: 14px;
-  }
-
-  .apply_card .card_content .card_title {
-    font-size: 2rem;
-  }
-
-  .apply_card .card_content .card_desc {
-    font-size: 1.2rem;
-  }
-
-  .apply_section .apply_big_container .apply_first_list {
-    gap: 2rem;
-  }
-
-  .seal_button {
-    height: 5.5rem;
-  }
-
-  .seal_icon {
-    font-size: 1.4rem;
-  }
+  .apply_card { width: 95%; border-radius: 14px; }
+  .apply_card .card_content .card_title { font-size: 2rem; }
+  .apply_card .card_content .card_desc { font-size: 1.2rem; }
+  .apply_section .apply_big_container .apply_first_list { gap: 2rem; }
+  .seal_button { height: 5.5rem; }
+  .seal_icon { font-size: 1.4rem; }
 }
-/* ========================================================= */
 
 @media (max-width: 400px) {
-  html {
-    font-size: 47%;
-  }
-
-  .countdown {
-    gap: 0.8rem;
-  }
-
-  .box {
-    width: 6.5rem;
-    height: 8rem;
-
-    font-size: 2.7rem;
-  }
-
-  .home_section .home_big_container .home_logo_container img {
-    height: 18rem;
-  }
-
-  .scroll {
-    padding: 2rem 1.4rem;
-  }
+  html { font-size: 47%; }
+  .countdown { gap: 0.8rem; }
+  .box { width: 6.5rem; height: 8rem; font-size: 2.7rem; }
+  .home_section .home_big_container .home_logo_container img { height: 18rem; }
+  .scroll { padding: 2rem 1.4rem; }
 }
