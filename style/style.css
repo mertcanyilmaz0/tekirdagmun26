@@ -95,7 +95,7 @@ header .logo:hover .tekirdagmun_logo {
 }
 
 header {
-  background-color: var(--bg-primary);
+  background-color: #1A1022;
   width: 100vw;
   height: 12rem;
   display: flex;
@@ -172,11 +172,46 @@ header .buttons button {
   flex-direction: column;
   align-items: top;
   justify-content: center;
-  background-image: url(/img/arkaplan.jpg);
+/*   background-image: url(/img/wp13653536-dune-movie-4k-wallpapers.jpg); 
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat; */
+  z-index: 2;
+}
+.home_section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image: url(/img/wp13653536-dune-movie-4k-wallpapers.jpg);
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
-  z-index: 2;
+
+  filter:
+    brightness(0.95)
+    contrast(1.2)
+    saturate(0.8)
+    blur(1px);
+
+  transform: scale(1.03);
+
+  z-index: -2;
+}
+
+.home_section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(14, 10, 18, 0.4),
+      rgba(14, 10, 18, 0.85)
+    );
+
+  z-index: -1;
 }
 .home_section .home_big_container .home_logo_container {
   display: flex;
@@ -189,6 +224,7 @@ header .buttons button {
 .home_section .home_big_container .home_head_container {
   text-align: center;
   font-size: 2rem;
+  color: var(--text-muted);
   opacity: 0.6;
 }
 .home_section .home_big_container .home_apply_container {
