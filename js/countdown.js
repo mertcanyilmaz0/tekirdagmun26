@@ -1,4 +1,4 @@
-const targetDate = new Date("2026-06-22T09:00:00").getTime();
+const targetDate = new Date("2026-09-08T09:00:00").getTime();
 
 function changeNumber(box, newValue) {
   const current = box.querySelector(".num");
