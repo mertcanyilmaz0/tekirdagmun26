@@ -757,7 +757,248 @@ footer .footer_list .footer_list_tiktok svg:hover {
   z-index: 2;
 }
 /* Apply End */
+/* Accommodation Start */
+/* .accommodation_container{
+  position: relative;
+  overflow: hidden;
+  min-height: calc(100vh - 11.4rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  z-index: 0;
+}
+.accommodation_container .accommodation_head{
+  color: var(--bg-primary);
+  font-size: 5.5rem;
+  text-align: center;
+}
+.accommodation_container .accommodation_list{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20rem;
+  list-style: none;
+}
 
+.accommodation_container .accommodation_list .accommodation_list_eleman .accommodation_alt_head{
+  color: var(--bg-primary);
+  font-size: 3rem;
+}
+.accommodation_container .accommodation_list .accommodation_list_eleman .accommodation_hotel_list{
+  align-items: center;
+  justify-content: center;
+  list-style: disc;
+}
+.accommodation_container .accommodation_list .accommodation_list_eleman .accommodation_hotel_list .accommodation_hotel_list_eleman{
+  color: var(--text-muted);
+  font-size: 1.8rem;
+} */
+/* Accommodation Start */
+
+.accommodation_container {
+    position: relative;
+    overflow: hidden;
+    min-height: calc(100vh - 11.4rem);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    padding: 4rem 5%;
+    z-index: 0;
+}
+
+.accommodation_container .accommodation_head {
+    color: var(--bg-primary);
+    font-size: 5.5rem;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.accommodation_container .accommodation_list {
+    width: 100%;
+    max-width: 1200px;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 4rem;
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* Hotel Cards */
+
+.accommodation_container
+.accommodation_list
+.accommodation_list_eleman {
+
+    background: #fff;
+
+    padding: 3rem;
+
+    border-radius: 2rem;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Hover */
+
+.accommodation_container
+.accommodation_list
+.accommodation_list_eleman:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+}
+
+
+/* Hotel Name */
+
+.accommodation_container
+.accommodation_list
+.accommodation_list_eleman
+.accommodation_alt_head {
+
+    color: var(--bg-primary);
+
+    font-size: 3rem;
+
+    margin: 0 0 2rem 0;
+
+    text-align: center;
+}
+
+
+/* Room List */
+
+.accommodation_container
+.accommodation_list
+.accommodation_list_eleman
+.accommodation_hotel_list {
+
+    margin: 0;
+    padding-left: 2.5rem;
+
+    list-style: disc;
+}
+
+
+/* Room */
+
+.accommodation_container
+.accommodation_list
+.accommodation_list_eleman
+.accommodation_hotel_list
+.accommodation_hotel_list_eleman {
+
+    color: var(--text-muted);
+
+    font-size: 1.8rem;
+
+    line-height: 1.8;
+
+}
+
+
+/* Tablet */
+
+@media (max-width: 900px) {
+
+    .accommodation_container {
+        padding: 4rem 6%;
+    }
+
+    .accommodation_container .accommodation_head {
+        font-size: 4.5rem;
+        margin-bottom: 4rem;
+    }
+
+    .accommodation_container .accommodation_list {
+        grid-template-columns: 1fr;
+        max-width: 650px;
+        gap: 3rem;
+    }
+
+    .accommodation_container
+    .accommodation_list
+    .accommodation_list_eleman {
+
+        padding: 2.5rem;
+    }
+
+    .accommodation_container
+    .accommodation_list
+    .accommodation_list_eleman
+    .accommodation_alt_head {
+
+        font-size: 2.7rem;
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .accommodation_container {
+        padding: 3rem 5%;
+    }
+
+    .accommodation_container .accommodation_head {
+        font-size: 3.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .accommodation_container .accommodation_list {
+        gap: 2rem;
+    }
+
+    .accommodation_container
+    .accommodation_list
+    .accommodation_list_eleman {
+
+        padding: 2rem;
+
+        border-radius: 1.5rem;
+    }
+
+    .accommodation_container
+    .accommodation_list
+    .accommodation_list_eleman
+    .accommodation_alt_head {
+
+        font-size: 2.3rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .accommodation_container
+    .accommodation_list
+    .accommodation_list_eleman
+    .accommodation_hotel_list
+    .accommodation_hotel_list_eleman {
+
+        font-size: 1.6rem;
+        line-height: 1.7;
+    }
+
+}
+
+
+/* Accommodation End */
+/* Accommodation End */
 /* Committees Start */
 /* ── SECTION ── */
 .committees_section {
